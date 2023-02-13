@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev --watchFolders='components/util/icon.tsx' -c \"next dev\"",
+    "dev": "tinacms dev --watchFolders='components/blocks/*.{tsx}' -c \"next dev\"",
     "build": "tinacms build && next build",
     "start": "tinacms build && next start",
     "export": "npm run build && next export",
@@ -25,6 +25,7 @@
     "postcss-nesting": "^10.1.0"
   },
   "dependencies": {
+    "@ahmadsufyan/component-library": "^0.2.4",
     "@headlessui/react": "1.7.5",
     "@tailwindcss/typography": "^0.5.8",
     "date-fns": "^2.23.0",
