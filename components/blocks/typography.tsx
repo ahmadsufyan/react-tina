@@ -5,12 +5,7 @@ import {
   TypographyProps as TypographyComponentProps
 } from '@ahmadsufyan/component-library';
 
-interface TypographyProps {
-  data?: TypographyComponentProps,
-  parentField?: any
-}
-
-export const Typography = ({ data, parentField }: TypographyProps) => {
+export const Typography = ({ data, parentField }) => {
   return (
     <TypographyComponent {...data}/>
   );

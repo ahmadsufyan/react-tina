@@ -6,6 +6,7 @@ import { Hero } from "./blocks/hero";
 import { Testimonial } from "./blocks/testimonial";
 import { Typography } from "./blocks/typography";
 import { Table } from "./blocks/table";
+import { Sidebar } from "./blocks/sidebar";
 
 export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
   return (
@@ -65,6 +66,15 @@ export const Blocks = (props: Omit<Page, "id" | "_sys" | "_values">) => {
                     key={i + block.__typename}
                   >
                     <Table data={block} parentField={`blocks.${i}`} />
+                  </div>
+                );
+              case "PageBlocksSidebar":
+                return (
+                  <div
+                    data-tinafield={`blocks.${i}`}
+                    key={i + block.__typename}
+                  >
+                    <Sidebar data={block} parentField={`blocks.${i}`} />
                   </div>
                 );
               default:

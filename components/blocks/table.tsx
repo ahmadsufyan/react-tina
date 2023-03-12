@@ -5,12 +5,7 @@ import {
   TableProps as TableComponentProps
 } from '@ahmadsufyan/component-library';
 
-interface TableProps {
-  data?: TableComponentProps,
-  parentField?: any
-}
-
-export const Table = ({ data, parentField }: TableProps) => {
+export const Table = ({ data, parentField }) => {
   return (
     <TableComponent
       bordered={data.bordered}
